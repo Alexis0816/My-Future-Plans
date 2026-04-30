@@ -7,7 +7,8 @@ const timelineData = [
     id: 1,
     title: "End of April",
     date: "Late April 2026",
-    content: "This Friday is a holiday, so I am not working. Also, this Sunday, I am going to share a dinner with my soccer friends. We are celebrating Labor Day.",
+    content: "This Friday is a holiday, so I won't work. Also, this Sunday, I am going to share a dinner with my soccer friends. We are celebrating Labor Day.",
+    question: "What about you? What are you doing this weekend?",
     icon: Calendar,
     color: "bg-blue-500"
   },
@@ -15,7 +16,7 @@ const timelineData = [
     id: 2,
     title: "First Week of May",
     date: "Early May 2026",
-    content: "Next week, I am planning to finish Intermediate 1 successfully. At work, I am going to have some presentations. I am thinking about dedicating more time to an app development because I'm pretty sure it will be quite complex.",
+    content: "This weekend, tomorrow exactly, I am planning to finish Intermediate 1 successfully. At work, I am going to have some presentations because I will present new features views and implementations. I am thinking about dedicating more time to an app development because I'm pretty sure it will be quite complex.",
     icon: GraduationCap,
     color: "bg-blue-600"
   },
@@ -24,6 +25,7 @@ const timelineData = [
     title: "Mid-May",
     date: "Mid-May 2026",
     content: "In two weeks, I am taking a machine learning midterm at my university, so I need to prepare for it.",
+    question: "Are you going to take any exams soon?",
     icon: BookOpen,
     color: "bg-blue-500"
   },
@@ -40,6 +42,7 @@ const timelineData = [
     title: "June",
     date: "June 2026",
     content: "Finally, in June, I might apply for new jobs if I don't continue at my current one. I'm not sure, but I think I will find a good opportunity. Honestly, I am going to work really hard to have a great first half of the year!",
+    question: "And tell me, how will your life be different by the end of this year?",
     icon: Briefcase,
     color: "bg-blue-500"
   }
@@ -106,6 +109,14 @@ const TimelineItem = ({ item, index }) => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 leading-relaxed">{item.content}</p>
+            {item.question && (
+              <div className="mt-4 p-3 bg-blue-50 border-l-4 border-blue-500 rounded-r">
+                <p className="text-blue-800 font-medium text-sm flex items-start gap-2">
+                  <span className="text-blue-500 font-bold">💭</span>
+                  <span>{item.question}</span>
+                </p>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -127,7 +138,10 @@ const Timeline = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-blue-900 mb-4 tracking-tight">
             PLANS AND PREDICTIONS FOR THE FUTURE
           </h1>
-          <div className="w-32 h-1 bg-blue-500 mx-auto rounded-full"></div>
+          <div className="w-32 h-1 bg-blue-500 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto mt-8 italic">
+            "Hi everyone! Today, I'm going to share my timeline and my plans for the near future. Let's start with this month."
+          </p>
         </div>
 
         <div className="relative">
