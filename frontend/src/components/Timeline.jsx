@@ -8,7 +8,6 @@ const timelineData = [
     title: "End of April",
     date: "Late April 2026",
     content: "This Friday is a holiday, so I won't work. Also, this Sunday, I am going to share a dinner with my soccer friends. We are celebrating Labor Day.",
-    question: "What about you? What are you doing this weekend?",
     icon: Calendar,
     color: "bg-blue-500"
   },
@@ -25,7 +24,6 @@ const timelineData = [
     title: "Mid-May",
     date: "Mid-May 2026",
     content: "In two weeks, I am taking a machine learning midterm at my university, so I need to prepare for it.",
-    question: "Are you going to take any exams soon?",
     icon: BookOpen,
     color: "bg-blue-500"
   },
@@ -42,7 +40,6 @@ const timelineData = [
     title: "June",
     date: "June 2026",
     content: "Finally, in June, I might apply for new jobs if I don't continue at my current one. I'm not sure, but I think I will find a good opportunity. Honestly, I am going to work really hard to have a great first half of the year!",
-    question: "And tell me, how will your life be different by the end of this year?",
     icon: Briefcase,
     color: "bg-blue-500"
   }
@@ -109,14 +106,6 @@ const TimelineItem = ({ item, index }) => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 leading-relaxed">{item.content}</p>
-            {item.question && (
-              <div className="mt-4 p-3 bg-blue-50 border-l-4 border-blue-500 rounded-r">
-                <p className="text-blue-800 font-medium text-sm flex items-start gap-2">
-                  <span className="text-blue-500 font-bold">💭</span>
-                  <span>{item.question}</span>
-                </p>
-              </div>
-            )}
           </CardContent>
         </Card>
       </div>
