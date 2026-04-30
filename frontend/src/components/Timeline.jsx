@@ -6,7 +6,7 @@ const timelineData = [
   {
     id: 1,
     title: "End of April",
-    date: "Late April 2025",
+    date: "Late April 2026",
     content: "This Friday is a holiday, so I am not working. Also, this Sunday, I am going to share a dinner with my soccer friends. We are celebrating Labor Day.",
     icon: Calendar,
     color: "bg-blue-500"
@@ -14,7 +14,7 @@ const timelineData = [
   {
     id: 2,
     title: "First Week of May",
-    date: "Early May 2025",
+    date: "Early May 2026",
     content: "Next week, I am planning to finish Intermediate 1 successfully. At work, I am going to have some presentations. I am thinking about dedicating more time to an app development because I'm pretty sure it will be quite complex.",
     icon: GraduationCap,
     color: "bg-blue-600"
@@ -22,7 +22,7 @@ const timelineData = [
   {
     id: 3,
     title: "Mid-May",
-    date: "Mid-May 2025",
+    date: "Mid-May 2026",
     content: "In two weeks, I am taking a machine learning midterm at my university, so I need to prepare for it.",
     icon: BookOpen,
     color: "bg-blue-500"
@@ -30,7 +30,7 @@ const timelineData = [
   {
     id: 4,
     title: "Second Sunday of May",
-    date: "Mother's Day 2025",
+    date: "Mother's Day 2026",
     content: "For Mother's Day, my brother and I are planning to organize a lunch to celebrate with our mom. I'm sure it will be a great day.",
     icon: Heart,
     color: "bg-blue-600"
@@ -38,7 +38,7 @@ const timelineData = [
   {
     id: 5,
     title: "June",
-    date: "June 2025",
+    date: "June 2026",
     content: "Finally, in June, I might apply for new jobs if I don't continue at my current one. I'm not sure, but I think I will find a good opportunity. Honestly, I am going to work really hard to have a great first half of the year!",
     icon: Briefcase,
     color: "bg-blue-500"
@@ -139,7 +139,7 @@ const Timeline = () => {
         </div>
 
         <div className="text-center mt-20 footer-fade-in">
-          <p className="text-gray-600 text-lg font-medium">Looking forward to an amazing 2025! 🚀</p>
+          <p className="text-gray-600 text-lg font-medium">Looking forward to an amazing 2026! 🚀</p>
         </div>
       </div>
     </div>
