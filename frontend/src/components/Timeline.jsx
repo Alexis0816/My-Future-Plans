@@ -8,6 +8,7 @@ const timelineData = [
     title: "End of April",
     date: "Late April 2026",
     content: "This Friday is a holiday, so I won't work. Also, this Sunday, I am going to share a dinner with my soccer friends. We are celebrating Labor Day.",
+    image: "https://images.unsplash.com/photo-1740506700638-01aba0ffbbc0",
     icon: Calendar,
     color: "bg-blue-500"
   },
@@ -32,6 +33,7 @@ const timelineData = [
     title: "Second Sunday of May",
     date: "Mother's Day 2026",
     content: "For Mother's Day, my brother and I are planning to organize a lunch to celebrate with our mom. I'm sure it will be a great day.",
+    image: "https://images.unsplash.com/photo-1578496780896-7081cc23c111",
     icon: Heart,
     color: "bg-blue-600"
   },
@@ -105,6 +107,15 @@ const TimelineItem = ({ item, index }) => {
             </div>
           </CardHeader>
           <CardContent>
+            {item.image && (
+              <div className="mb-4 rounded-lg overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
             <p className="text-gray-700 leading-relaxed">{item.content}</p>
           </CardContent>
         </Card>
@@ -128,9 +139,6 @@ const Timeline = () => {
             PLANS AND PREDICTIONS FOR THE FUTURE
           </h1>
           <div className="w-32 h-1 bg-blue-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto mt-8 italic">
-            "Hi everyone! Today, I'm going to share my timeline and my plans for the near future. Let's start with this month."
-          </p>
         </div>
 
         <div className="relative">

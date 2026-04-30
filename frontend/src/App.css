@@ -26,7 +26,14 @@
 
 /* Timeline Line Animation */
 .timeline-line {
-  animation: growLine 2s ease-out;
+  animation: growLine 2s ease-out, shimmer 3s infinite;
+  background: linear-gradient(
+    180deg,
+    rgba(96, 165, 250, 0.8) 0%,
+    rgba(59, 130, 246, 1) 50%,
+    rgba(96, 165, 250, 0.8) 100%
+  );
+  background-size: 100% 200%;
 }
 
 @keyframes growLine {
@@ -38,9 +45,20 @@
   }
 }
 
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  50% {
+    background-position: 0% 100%;
+    opacity: 0.9;
+  }
+}
+
 /* Pulse Animation for Timeline Dots */
 .pulse-animation {
-  animation: pulse 2s infinite;
+  animation: pulse 2s infinite, glow 2s infinite;
 }
 
 @keyframes pulse {
@@ -51,6 +69,17 @@
   50% {
     transform: scale(1.1);
     box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8),
+                0 0 30px rgba(59, 130, 246, 0.5);
   }
 }
 
